@@ -1,0 +1,29 @@
+<section class="register">
+	<form name = "registerForm" novalidate ng-submit= "register()">
+		<h1>Take my cheese, Jack.</h1>
+		<p>It'll all make sense later</p>
+		<input type = "firstName" name = "firstName" placeholder = "Jack" autofocus
+		ng-model= "user.firstName" ng-required = "true">
+		<p class= "error validationerror"
+		 ng-show = "registerForm.firstName.$invalid && registerForm.firstName.$touched">
+		 need it in ink</p>
+		 <input type = "lastName" name = "lastName" placeholder = "Farnsworth" autofocus
+		ng-model= "user.lastName" ng-required = "true">
+		<p class= "error validationerror"
+		 ng-show = "registerForm.lastName.$invalid && registerForm.lastName.$touched">
+		 need it in ink</p>
+		<input type = "email" name = "email" placeholder = "example@domain.com" autofocus
+		ng-model= "user.emai0l" ng-required = "true">
+		<p class= "error validationerror"
+		 ng-show = "loginForm.email.$invalid && loginForm.email.$touched">
+		 Invalid E-mail</p>
+		
+		<input type = "password" name = "password" placeholder ="*****" 
+		ng-model= "user.password" ng-required ="true">
+		<p class= "error validationerror" 
+		 ng-show = "registerForm.password.$invalid"> 
+		 Password is required</p>
+		<button type ="submit" class = "btn" ng-disabled= "registerForm.$invalid">register</button>
+		<p> or <a href= "#/login">login</a></p>
+	</form><!-- turn off HTML validation @Override using angular-->
+</section>
