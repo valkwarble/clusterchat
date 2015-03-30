@@ -1,6 +1,7 @@
 {
   "name": "AngularData",
   "version": "0.0.1",
+  "main": "builds/development/index.html",
   "description": "An application for taking attendance at meetups. Part of my Data Driven Web Applications with Angular.js course at Lynda.com",
   "devDependencies": {
     "gulp": "^3.8.8",
@@ -11,6 +12,7 @@
     "node": "0.10.x"
   },
   "dependencies": {
+    "express": "~4.9.x",
     "firechat": "^2.0.1"
   }
 }
