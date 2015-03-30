@@ -1,0 +1,23 @@
+<section class="login">
+	<form name = "loginForm" novalidate ng-submit= "login()">
+		<h1>No we do not have cheese.</h1>
+		<p>Welcome back Jack</p>
+		<p class= "error formerror" ng-show = "message">{{message}}</p>
+		<input type = "email" name = "email" placeholder = "example@domain.com" autofocus
+		ng-model= "user.email" ng-required = "true">
+		<p class= "error validationerror"
+		 ng-show = "loginForm.email.$invalid && loginForm.email.$touched">
+		 Invalid E-mail</p>
+		<input type = "password" name = "password" placeholder ="password" 
+		ng-model= "user.password" ng-required ="true">
+		<p class= "error validationerror" 
+		 ng-show = "loginForm.password.$invalid"> 
+		 Password is required</p>
+		<button type ="submit" class = "btn" ng-disabled= "loginForm.$invalid">Login</button>
+		<p> or <a href= "#/register">register</a></p>
+	</form><!-- turn off HTML validation @Override using angular-->
+	<form name = "facebookloginForm" novalidate ng-submit= "facebookLogin()">
+		<button type ="submit" class = "btn" >Facebook Login</button>
+	</form><!-- turn off HTML validation @Override using angular-->
+	
+</section>
